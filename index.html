@@ -1,26 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yellow - 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background-color: gold;
-            color: grey;
-        }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          #ffd700 0%,
+          #ffb300 50%,
+          #ff8c00 100%
+        );
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+      }
+
+      /* Decorative background circles */
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        border-radius: 50%;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      body::before {
+        width: 500px;
+        height: 500px;
+        background: #fff;
+        top: -150px;
+        right: -100px;
+      }
+
+      body::after {
+        width: 400px;
+        height: 400px;
+        background: #fff;
+        bottom: -120px;
+        left: -80px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 24px;
+        padding: 3rem 4rem;
+        text-align: center;
+        box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.15),
+          0 2px 8px rgba(0, 0, 0, 0.08);
+        max-width: 520px;
+        width: 90%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.35);
+        color: #7a4a00;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.3rem 1rem;
+        border-radius: 999px;
+        margin-bottom: 1.25rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+      }
+
+      .stat {
+        margin-top: 2rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        padding: 0.6rem 1.4rem;
+        font-weight: 700;
+        color: #7a4a00;
+        font-size: 1rem;
+      }
+
+      .stat span {
+        font-size: 1.4rem;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <h1>
-        Yellow - 2
-    </h1>
-    <p>
-        we are so coolio, uh we have 5k points day one, day 2 ???
-    </p>
-
-</body>
-
+  <body>
+    <div class="card">
+      <div class="badge">Team Yellow</div>
+      <h1>Yellow&nbsp;&#8212;&nbsp;2</h1>
+      <p>we are so coolio, uh we have 5k points day one, day 2 ???</p>
+      <div class="stat"><span>⭐</span> 5,000 points &mdash; Day 1</div>
+    </div>
+  </body>
 </html>
